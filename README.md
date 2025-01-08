@@ -24,7 +24,7 @@ file_path = ['./data/agenda_example.xlsx']
 # Create Conference Assistant.
 my_assistant = LLMAssistant(firm=firm, instruction=instrction, file_path=file_path, model=model)
 ```  
-<mark> ⚠ If there are many documents, it is recommended to use a model that supports longer context input.</mark>  
+⚠ <mark>If there are many documents, it is recommended to use a model that supports longer context input.</mark>  
 ## 💫 start chatting with your assistant  
 Quickly initiate chat, support streaming and non streaming, default streaming.
 ```python 
@@ -51,7 +51,7 @@ for chunk in my_assistant.chat(query=query, stream=stream, rounds=rounds):
     answer += chunk
 print('answer:', answer)
 ```
-⚠ Multiple rounds of session require middleware to store and manage session information. Please change your Redis configuration in the config.py as shown below:  
+⚠ <mark>Multiple rounds of session require middleware to store and manage session information. Please change your Redis configuration in the config.py as shown below:</mark>    
 ```python  
 redis_config = {
     'host':'127.0.0.1',
