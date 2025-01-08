@@ -6,8 +6,7 @@ Include but are not limited to the following purposes:
 - Hotel and itinerary arrangement
 - Other precautions  
 ## 🤖 create your exclusive conference assistant  
-You need to specify the name of the company, school, or organization, and you can also add some instructions to restrict or optimize the assistant's responses.      
- Details are as follows:  
+You need to specify the name of the company, school, or organization, and you can also add some instructions to restrict or optimize the assistant's responses.   
 ```python 
 from assistant import LLMAssistant
 
@@ -55,7 +54,7 @@ for chunk in my_assistant.chat(query=query, stream=stream, rounds=rounds):
     answer += chunk
 print('answer:', answer)
 ```
-Multiple rounds of session require middleware to store and manage session information. Please change your Redis configuration in the *config.py* as shown below:      
+Multiple rounds of session require middleware to store and manage session information. Please change your Redis configuration in the <mark>*config.py*</mark> as shown below:      
 ```python  
 redis_config = {
     'host':'127.0.0.1',
