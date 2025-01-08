@@ -1,4 +1,4 @@
-# conference-assistant
+# conference-assistant ![Static Badge](https://img.shields.io/badge/Apache-2.0-green) ![Static Badge](https://img.shields.io/badge/NewBie-NLP-blue)
 A conference assistant based on the LLMs, which can be used for various types of conferences such as company annual meetings and academic conferences. It is very easy to use, just provide the meeting documents.
 
 ## 🤖 create your exclusive conference assistant  
@@ -34,8 +34,8 @@ for chunk in my_assistant.single_chat(query=query, stream=stream):
     answer += chunk
 print('answer:', answer)
 ```
-## 💥 Start a more powerful chat  
-By combining historical conversation information, the assistant can fully understand each question and answer more accurately.  
+## 💥 start a more powerful chat  
+By combining historical conversation information, the assistant can fully understand each query and answer more accurately.  
 When chatting, you need to specify a session ID to manage conversation information and specify the conversation rounds that the assistant should consider when answering.
 ```python 
 # Start a Chat.
