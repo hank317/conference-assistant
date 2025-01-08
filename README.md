@@ -5,7 +5,7 @@ A conference assistant based on the LLMs, which can be used for various types of
 You need to specify the name of the company, school, or organization, and you can also add some instructions to restrict or optimize the assistant's responses.  
 You need to provide additional conference documents, and the assistant will learn and answer based on the content of these documents.  
 In addition, you need to specify the large language model used by the assistant. We follow the OpenAI SDK, and currently support the following models: qwen、kimi、spark. 
-If there are many documents, it is recommended to use a model that supports longer context input.
+If there are many documents, it is recommended to use a model that supports longer context input.  
 Details are as follows:  
 ```python 
 from assistant import LLMAssistant
@@ -23,17 +23,28 @@ file_path = ['./data/agenda_example.xlsx'] # Replace with your file path.
 my_assistant = LLMAssistant(firm=firm, instruction=instrction, file_path=file_path, model=model)
 ```
 ## ✨ start chatting with your assistant ✨ 
-Before starting a chat, you need to create a session ID to manage session information, as shown below:  
+Quickly initiate chat, support streaming and non streaming, default streaming.
 ```python 
 # Start a Chat.
-session_id = '20250108001'
 query = '你叫什么名字？'
+stream = False
 
 answer = ''
-for chunk in my_assistant.chat(session_id, query):
+for chunk in my_assistant.single_chat(query=query, stream=stream):
     answer += chunk
 print('answer:', answer)
+```
+## ✨ Start a more powerful chat ✨ 
+By combining historical conversation information, the assistant can fully understand each question and answer more accurately.  
+When chatting, you need to specify a session ID to manage conversation information and specify the conversation rounds that the assistant should consider when answering.
+```python 
+# Start a Chat.
+query = '你叫什么名字？'
+stream = True
+rounds = 3
 
-# Retrieve historical conversation information based on session ID.
-print(my_assistant.history_info(session_id))
+answer = ''
+for chunk in my_assistant.chat(query=query, stream=stream, rounds=rounds):
+    answer += chunk
+print('answer:', answer)
 ```
