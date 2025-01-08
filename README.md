@@ -5,8 +5,7 @@ A conference assistant based on the LLMs, which can be used for various types of
 You need to specify the name of the company, school, or organization, and you can also add some instructions to restrict or optimize the assistant's responses.  
 You need to provide additional conference documents, and the assistant will learn and answer based on the content of these documents.  
 In addition, you need to specify the large language model used by the assistant. We follow the OpenAI SDK, and currently support the following models: qwen、kimi、spark. 
-If there are many documents, it is recommended to use a model that supports longer context input.  
-Details are as follows:  
+ Details are as follows:  
 ```python 
 from assistant import LLMAssistant
 
@@ -21,7 +20,8 @@ file_path = ['./data/agenda_example.xlsx'] # Replace with your file path.
 # Create Conference Assistant.
 # 通义千问：qwen-max，qwen-plus；讯飞星火：generalv3.5；kimi：moonshot-v1-8k，moonshot-v1-32k
 my_assistant = LLMAssistant(firm=firm, instruction=instrction, file_path=file_path, model=model)
-```
+```  
+⚠ If there are many documents, it is recommended to use a model that supports longer context input. 
 ## 💫 start chatting with your assistant  
 Quickly initiate chat, support streaming and non streaming, default streaming.
 ```python 
@@ -35,8 +35,8 @@ for chunk in my_assistant.single_chat(query=query, stream=stream):
 print('answer:', answer)
 ```
 ## 💥 start a more powerful chat  
-By combining historical conversation information, the assistant can fully understand each query and answer more accurately.  
-When chatting, you need to specify a session ID to manage conversation information and specify the conversation rounds that the assistant should consider when answering.
+By combining historical session information, the assistant can fully understand each query and answer more accurately.  
+When chatting, you need to specify a session ID to manage session information and specify the session rounds that the assistant should consider when answering.
 ```python 
 # Start a Chat.
 query = '你叫什么名字？'
@@ -47,4 +47,12 @@ answer = ''
 for chunk in my_assistant.chat(query=query, stream=stream, rounds=rounds):
     answer += chunk
 print('answer:', answer)
+```
+⚠ Multiple rounds of session require middleware to store and manage session information. Please change your Redis configuration in the configuration file as shown below:  
+```python  
+redis_config = {
+    'host':'127.0.0.1',
+    'port':'7001',
+    'password':'xxxxxxxxx'
+}
 ```
