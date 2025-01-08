@@ -24,7 +24,7 @@ file_path = ['./data/agenda_example.xlsx']
 # Create Conference Assistant.
 my_assistant = LLMAssistant(firm=firm, instruction=instrction, file_path=file_path, model=model)
 ```  
-⚠ If there are many documents, it is recommended to use a model that supports longer context input. 
+<mark> ⚠ If there are many documents, it is recommended to use a model that supports longer context input.</mark>  
 ## 💫 start chatting with your assistant  
 Quickly initiate chat, support streaming and non streaming, default streaming.
 ```python 
