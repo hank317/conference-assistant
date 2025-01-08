@@ -23,9 +23,11 @@ file_path = ['./data/agenda_example.xlsx']
 my_assistant = LLMAssistant(firm=firm, instruction=instrction, file_path=file_path, model=model)
 ```  
 You need to specify the large language model used by the assistant. We follow the OpenAI SDK, and currently support the following models: qwen、kimi、spark. If there are many documents, it is recommended to use a model that supports longer context input.  
+```
 1. qwen: qwen-plus, qwen-max  
 2. kimi: moonshot-v1-8k, moonshot-v1-32k  
 3. spark: generalv3.5  
+``` 
 You need to provide additional conference documents, and the assistant will learn and answer based on the content of these documents. We currently support a variety of file formats, including DOC, DOCX, XLS, XLSX, TXT, CSV, TSV, and more. However, we recommend using <mark>XLSX</mark> or <mark>CSV</mark> formats for optimal results.   
 ## 💫 start chatting with your assistant  
 Quickly initiate chat, support streaming and non streaming, default streaming.
