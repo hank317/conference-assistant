@@ -28,7 +28,7 @@ qwen: qwen-plus, qwen-max
 kimi: moonshot-v1-8k, moonshot-v1-32k  
 spark: generalv3.5  
 ``` 
-You need to provide additional conference documents, and the assistant will learn and answer based on the content of these documents. We currently support a variety of file formats, including <font color=blue>*.doc*, *.docx*, *.xls*, *.xlsx*, *.txt*, *.csv*, *.tsv*</font>, and more. However, we recommend using <font color=blue><mark>*.xlsx*</mark> or <mark>*.csv*</mark></font> formats for optimal results.   
+You need to provide additional conference documents, and the assistant will learn and answer based on the content of these documents. We currently support a variety of file formats, including *.doc*, *.docx*, *.xls*, *.xlsx*, *.txt*, *.csv*, *.tsv*, and more. However, we recommend using <mark>*.xlsx*</mark> or <mark>*.csv*</mark> formats for optimal results.   
 ## 💫 start chatting with your assistant  
 Quickly initiate chat, support streaming and non streaming, default streaming.
 ```python 
@@ -55,7 +55,7 @@ for chunk in my_assistant.chat(query=query, stream=stream, rounds=rounds):
     answer += chunk
 print('answer:', answer)
 ```
-⚠ <mark>Multiple rounds of session require middleware to store and manage session information. Please change your Redis configuration in the config.py as shown below:</mark>    
+Multiple rounds of session require middleware to store and manage session information. Please change your Redis configuration in the *config.py* as shown below:      
 ```python  
 redis_config = {
     'host':'127.0.0.1',
