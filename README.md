@@ -1,6 +1,13 @@
 # conference-assistant ![Static Badge](https://img.shields.io/badge/Apache-2.0-green) ![Static Badge](https://img.shields.io/badge/NewBie-NLP-blue)
 A conference assistant based on the LLMs, which can be used for various types of conferences such as company annual meetings and academic conferences. It is very easy to use, just provide the meeting documents.
-
+Include but are not limited to the following purposes:
+- Basic information of the meeting
+- Specific agenda
+- Hotel and itinerary arrangement
+- Other precautions
+You can also explore additional customized developments triggered through natural language.  
+If you have any needs in this area, please feel welcome to contact us:  
+- 📬 : zhenhu317@gmail.com
 ## 🤖 create your exclusive conference assistant  
 You need to specify the name of the company, school, or organization, and you can also add some instructions to restrict or optimize the assistant's responses.  
 You need to provide additional conference documents, and the assistant will learn and answer based on the content of these documents.  
@@ -10,15 +17,14 @@ In addition, you need to specify the large language model used by the assistant.
 from assistant import LLMAssistant
 
 # Assistant Settings.
-firm = '中信国安实业集团有限公司' # Your company's name, suggested full name.
-instruction = '' # Some custom instructions are used to optimize the reply effect of the assistant.
+firm = '中信国安实业集团有限公司' 
+instruction = '' 
 model = 'qwen-max'
 
 # Conference Information.
-file_path = ['./data/agenda_example.xlsx'] # Replace with your file path.
+file_path = ['./data/agenda_example.xlsx'] 
         
 # Create Conference Assistant.
-# 通义千问：qwen-max，qwen-plus；讯飞星火：generalv3.5；kimi：moonshot-v1-8k，moonshot-v1-32k
 my_assistant = LLMAssistant(firm=firm, instruction=instrction, file_path=file_path, model=model)
 ```  
 ⚠ If there are many documents, it is recommended to use a model that supports longer context input. 
@@ -48,7 +54,7 @@ for chunk in my_assistant.chat(query=query, stream=stream, rounds=rounds):
     answer += chunk
 print('answer:', answer)
 ```
-⚠ Multiple rounds of session require middleware to store and manage session information. Please change your Redis configuration in the configuration file as shown below:  
+⚠ Multiple rounds of session require middleware to store and manage session information. Please change your Redis configuration in the config.py as shown below:  
 ```python  
 redis_config = {
     'host':'127.0.0.1',
