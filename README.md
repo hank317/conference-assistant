@@ -5,8 +5,6 @@ Include but are not limited to the following purposes:
 - Specific agenda
 - Hotel and itinerary arrangement
 - Other precautions  
-You can also explore additional customized developments triggered through natural language. If you have any needs in this area, please feel welcome to contact us:  
-- 📬 : zhenhu317@gmail.com  
 ## 🤖 create your exclusive conference assistant  
 You need to specify the name of the company, school, or organization, and you can also add some instructions to restrict or optimize the assistant's responses.  
 You need to provide additional conference documents, and the assistant will learn and answer based on the content of these documents.  
@@ -61,3 +59,6 @@ redis_config = {
     'password':'xxxxxxxxx'
 }
 ```
+## 🤝 start a more powerful chat 
+You can also explore additional customized developments triggered through natural language. If you have any needs in this area, please feel welcome to contact us:  
+- 📬 : zhenhu317@gmail.com  
