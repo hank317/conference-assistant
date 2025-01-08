@@ -59,6 +59,6 @@ redis_config = {
     'password':'xxxxxxxxx'
 }
 ```
-## 🤝 start a more powerful chat 
+## 🤝 Comprehensive personalized customization
 You can also explore additional customized developments triggered through natural language. If you have any needs in this area, please feel welcome to contact us:  
 - 📬 : zhenhu317@gmail.com  
