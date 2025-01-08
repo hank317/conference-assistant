@@ -7,7 +7,7 @@ Include but are not limited to the following purposes:
 - Other precautions  
 ## 🤖 create your exclusive conference assistant  
 You need to specify the name of the company, school, or organization, and you can also add some instructions to restrict or optimize the assistant's responses.  
-You need to provide additional conference documents, and the assistant will learn and answer based on the content of these documents.  
+You need to provide additional conference documents, and the assistant will learn and answer based on the content of these documents. We currently support a variety of file formats, including DOC, DOCX, XLS, XLSX, TXT, CSV, TSV, and more. However, we recommend using XLSX or CSV formats for optimal results.    
 In addition, you need to specify the large language model used by the assistant. We follow the OpenAI SDK, and currently support the following models: qwen、kimi、spark. 
  Details are as follows:  
 ```python 
@@ -59,6 +59,6 @@ redis_config = {
     'password':'xxxxxxxxx'
 }
 ```
-## 🤝 Comprehensive personalized customization
+## 🤝 personalized customization
 You can also explore additional customized developments triggered through natural language. If you have any needs in this area, please feel welcome to contact us:  
 - 📬 : zhenhu317@gmail.com  
