@@ -1,6 +1,6 @@
 # Conference Assistant ![Static Badge](https://img.shields.io/badge/Apache-2.0-green) ![Static Badge](https://img.shields.io/badge/NewBie-NLP-blue)  
 ![project_logo](./images/conference_assistant_logo.png)  
-[English](README.md) | [中文](./README_zh.md)
+[English](README.md) | [中文](./README_zh.md)  
 基于大语言模型（LLMs）的会议助手，适用于公司年会、学术研讨会等多种类型的会议。该助手使用非常简便，仅需提供会议相关文档即可启动服务。  
 包括但不限于以下用途：
 - 会议基本信息
@@ -8,37 +8,37 @@
 - 酒店与行程预订
 - 其他注意事项
 ## 🤖 创建助手  
-You need to specify the name of the company, school, or organization, and you can also add some instructions to restrict or optimize the assistant's responses.   
+您需要指定您的公司、学校或组织的名称，并且可以添加一些指令来限制或优化助手的回复。  
 ```python 
 from assistant import LLMAssistant
 
-# Assistant Settings.
+# 助手配置.
 firm = '中信国安实业集团有限公司' 
 instruction = '' 
 model = 'qwen-max'
 
-# Conference Information.
+# 会议信息
 file_path = ['./data/agenda_example.xlsx'] 
         
-# Create Conference Assistant.
+# 实例化
 my_assistant = LLMAssistant(firm=firm, instruction=instrction, file_path=file_path, model=model)
 ```  
-You need to specify the large language model used by the assistant. We follow the OpenAI SDK, and currently support the following models: qwen、kimi、spark. If there are many documents, it is recommended to use a model that supports longer context input.  
+您需要指定助手所使用的大语言模型。我们遵循 OpenAI 的 SDK，目前支持以下模型： Qwen、Kimi、Spark 。如果会议文档较多，建议您使用支持更长上下文输入的模型。    
 ```python
-# Add your api_key to the environment variables.
+# 在环境变量中添加您的第三方llm api_key
 import os
 os.environ['API_KEY'] = 'sk-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
-# Support the following models:
+# 支持以下大语言模型:
 # qwen: qwen-plus, qwen-max  
 # kimi: moonshot-v1-8k, moonshot-v1-32k  
 # spark: generalv3.5  
 ``` 
-You need to provide additional conference documents, and the assistant will learn and answer based on the content of these documents. We currently support a variety of file formats, including *.doc*, *.docx*, *.xls*, *.xlsx*, *.txt*, *.csv*, *.tsv*, and more. However, we recommend using <mark>*.xlsx*</mark> or <mark>*.csv*</mark> formats for optimal results.   
+您需要提供额外的会议文档，助手将基于这些文档的内容进行学习并作答。我们目前支持多种文件格式，包括 *.doc*, *.docx*, *.xls*, *.xlsx*, *.txt*, *.csv*, *.tsv* 等。 推荐使用 <mark>*.xlsx*</mark> 或者 <mark>*.csv*</mark> 。  
 ## 💫 快速开始  
-Quickly initiate chat, support streaming and non streaming, default streaming.
+快速发起聊天，支持流式和非流式传输，默认为流式传输。  
 ```python 
-# Start a Chat.
+# 开始对话
 query = '你叫什么名字？'
 stream = False
 
@@ -48,10 +48,10 @@ for chunk in my_assistant.single_chat(query=query, stream=stream):
 print('answer:', answer)
 ```
 ## 💥 对话增强  
-By combining historical session information, the assistant can fully understand each query and answer more accurately.  
-When chatting, you need to specify a session ID to manage session information and specify the session rounds that the assistant should consider when answering.
+结合历史会话信息，助手能够全面理解每一个问题，从而提供更加准确的回答。  
+在聊天时，您需要指定一个会话ID来管理会话信息，并明确助手在回答问题时应考虑的会话轮次。  
 ```python 
-# Start a Chat.
+# 开始对话
 query = '你叫什么名字？'
 stream = True
 rounds = 3
@@ -61,7 +61,7 @@ for chunk in my_assistant.chat(query=query, stream=stream, rounds=rounds):
     answer += chunk
 print('answer:', answer)
 ```
-Multiple rounds of session require middleware to store and manage session information. Please change your Redis configuration in the <mark>*config.py*</mark> as shown below:      
+多轮次会话需要中间件来存储和管理会话信息。请按照如下所示，在<mark>config.py</mark>中更改您的 Redis 配置：      
 ```python  
 redis_config = {
     'host':'127.0.0.1',
@@ -70,7 +70,7 @@ redis_config = {
 }
 ```
 ## 🤝 个性化定制
-You can also explore additional customized developments triggered through natural language. If you have any needs in this area, please feel welcome to contact us:  
-- 📬 : zhenhu317@gmail.com  
-## 🏷 许可
-Conference Assistant is licensed under the [Apache-2.0 License](./LICENSE). 
+您还可以探索通过自然语言触发的其他定制化开发。若您在这一方面有任何需求，欢迎随时联系我们： 
+- 邮箱: zhenhu317@gmail.com  
+## 🏷 开源协议
+会议助手遵从[Apache-2.0 License](./LICENSE). 

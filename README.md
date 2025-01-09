@@ -1,6 +1,6 @@
 # Conference Assistant ![Static Badge](https://img.shields.io/badge/Apache-2.0-green) ![Static Badge](https://img.shields.io/badge/NewBie-NLP-blue)  
 ![project_logo](./images/conference_assistant_logo.png)  
-[English](README.md) | [中文](./README_zh.md)
+[English](README.md) | [中文](./README_zh.md)  
 A conference assistant based on the LLMs, which can be used for various types of conferences such as company annual meetings and academic conferences. It is very easy to use, just provide the meeting documents.  
 Include but are not limited to the following purposes:
 - Basic information of the meeting
@@ -71,6 +71,6 @@ redis_config = {
 ```
 ## 🤝 personalized customization
 You can also explore additional customized developments triggered through natural language. If you have any needs in this area, please feel welcome to contact us:  
-- 📬 : zhenhu317@gmail.com  
+- email : zhenhu317@gmail.com  
 ## 🏷 license
 Conference Assistant is licensed under the [Apache-2.0 License](./LICENSE). 
