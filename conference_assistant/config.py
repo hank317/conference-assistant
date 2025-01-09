@@ -16,4 +16,4 @@ redis_config = {
     'password':'xxxxxxxxx'
 }
 
-cluster = True
+cluster = False
