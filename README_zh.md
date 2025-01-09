@@ -2,7 +2,7 @@
 ![project_logo](./images/conference_assistant_logo.png)  
 <h4 align="center">
     <p>
-        <a href=#创建>🤖 创建助手</a> |
+        <a href=#创建>创建助手</a> |
         <a href=#对话>💫 快速开始</a> |
         <a href=#增强>💥 对话增强</a> |
         <a href=#定制>🤝 个性化定制</a> |
@@ -17,7 +17,7 @@
 - 具体议程安排
 - 酒店与行程预订
 - 其他注意事项
-## 🤖 创建助手
+## 创建助手
 您需要指定您的公司、学校或组织的名称，并且可以添加一些指令来限制或优化助手的回复。  
 ```python 
 from assistant import LLMAssistant
