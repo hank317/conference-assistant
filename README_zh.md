@@ -88,6 +88,7 @@ history = my_assistant.history_info(session_id)
 print('session history: ', history)
 ```   
 ## 🤝 个性化定制
+![project_case](./images/conference_assistant_case_zh.png)  
 您还可以探索通过自然语言触发的其他定制化开发。若您在这一方面有任何需求，欢迎随时联系我们： 
 - 邮箱: zhenhu317@gmail.com  
 ## 🏷 开源协议
