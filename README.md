@@ -2,11 +2,11 @@
 ![project_logo](./images/conference_assistant_logo.png)  
 <h4 align="center">
     <p>
-        <a href=#create>🤖 create your exclusive conference assistant</a> |
-        <a href=#chat>💫 quickly chat with your assistant</a> |
-        <a href=#enhance>💥 start a more powerful chat</a> |
-        <a href=#customize>🤝 personalized customization</a> |
-        <a href="#license">🏷 license</a> 
+        <a href="#-create-your-exclusive-conference-assistant">🤖 create</a> |
+        <a href="#-quickly-chat-with-your-assistant">💫 chat</a> |
+        <a href="#-start-a-more-powerful-chat">💥 enhance</a> |
+        <a href="#-personalized-customization">🤝 customize</a> |
+        <a href="#-license">🏷 license</a> 
     <p>
 </h4>  
 
