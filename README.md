@@ -1,5 +1,14 @@
 # Conference Assistant ![Static Badge](https://img.shields.io/badge/Apache-2.0-green) ![Static Badge](https://img.shields.io/badge/NewBie-NLP-blue)  
 ![project_logo](./images/conference_assistant_logo.png)  
+<h4 align="center">
+    <p>
+        <a href=#create>🤖 create your exclusive conference assistant</a> |
+        <a href=#chat>💫 quickly chat with your assistant</a> |
+        <a href=#enhance>💥 start a more powerful chat</a> |
+        <a href=#customize>🤝 personalized customization</a> |
+        <a href="#license">🏷 license</a> 
+    <p>
+</h4>
 [English](README.md) | [中文](./README_zh.md)  
 A conference assistant based on the LLMs, which can be used for various types of conferences such as company annual meetings and academic conferences. It is very easy to use, just provide the meeting documents.  
 Include but are not limited to the following purposes:

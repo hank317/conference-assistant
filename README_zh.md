@@ -12,7 +12,7 @@
 ```python 
 from assistant import LLMAssistant
 
-# 助手配置.
+# 助手配置
 firm = '中信国安实业集团有限公司' 
 instruction = '' 
 model = 'qwen-max'
@@ -29,7 +29,7 @@ my_assistant = LLMAssistant(firm=firm, instruction=instrction, file_path=file_pa
 import os
 os.environ['API_KEY'] = 'sk-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
-# 支持以下大语言模型:
+# 支持以下大语言模型
 # qwen: qwen-plus, qwen-max  
 # kimi: moonshot-v1-8k, moonshot-v1-32k  
 # spark: generalv3.5  
@@ -48,8 +48,7 @@ for chunk in my_assistant.single_chat(query=query, stream=stream):
 print('answer:', answer)
 ```
 ## 💥 对话增强  
-结合历史会话信息，助手能够全面理解每一个问题，从而提供更加准确的回答。  
-在聊天时，您需要指定一个会话ID来管理会话信息，并明确助手在回答问题时应考虑的会话轮次。  
+结合历史会话信息，助手能够全面理解每一个问题，从而提供更加准确的回答。在聊天时，您需要指定一个会话ID来管理会话信息，并明确助手在回答问题时应考虑的会话轮次。  
 ```python 
 # 开始对话
 query = '你叫什么名字？'
@@ -61,7 +60,7 @@ for chunk in my_assistant.chat(query=query, stream=stream, rounds=rounds):
     answer += chunk
 print('answer:', answer)
 ```
-多轮次会话需要中间件来存储和管理会话信息。请按照如下所示，在<mark>config.py</mark>中更改您的 Redis 配置：      
+多轮次会话需要中间件来存储和管理会话信息。请按照如下所示，在 <mark>config.py</mark> 中更改您的 Redis 配置：      
 ```python  
 redis_config = {
     'host':'127.0.0.1',
