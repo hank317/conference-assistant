@@ -1,13 +1,13 @@
 # Conference Assistant ![Static Badge](https://img.shields.io/badge/Apache-2.0-green) ![Static Badge](https://img.shields.io/badge/NewBie-NLP-blue)  
 ![project_logo](./images/conference_assistant_logo.png)  
 [English](README.md) | [中文](./README_zh.md)
-A conference assistant based on the LLMs, which can be used for various types of conferences such as company annual meetings and academic conferences. It is very easy to use, just provide the meeting documents.  
-Include but are not limited to the following purposes:
-- Basic information of the meeting
-- Specific agenda
-- Hotel and itinerary arrangement
-- Other precautions  
-## 🤖 create your exclusive conference assistant  
+基于大语言模型（LLMs）的会议助手，适用于公司年会、学术研讨会等多种类型的会议。该助手使用非常简便，仅需提供会议相关文档即可启动服务。  
+包括但不限于以下用途：
+- 会议基本信息
+- 具体议程安排
+- 酒店与行程预订
+- 其他注意事项
+## 🤖 创建助手  
 You need to specify the name of the company, school, or organization, and you can also add some instructions to restrict or optimize the assistant's responses.   
 ```python 
 from assistant import LLMAssistant
@@ -35,7 +35,7 @@ os.environ['API_KEY'] = 'sk-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 # spark: generalv3.5  
 ``` 
 You need to provide additional conference documents, and the assistant will learn and answer based on the content of these documents. We currently support a variety of file formats, including *.doc*, *.docx*, *.xls*, *.xlsx*, *.txt*, *.csv*, *.tsv*, and more. However, we recommend using <mark>*.xlsx*</mark> or <mark>*.csv*</mark> formats for optimal results.   
-## 💫 quickly chat with your assistant  
+## 💫 快速开始  
 Quickly initiate chat, support streaming and non streaming, default streaming.
 ```python 
 # Start a Chat.
@@ -47,7 +47,7 @@ for chunk in my_assistant.single_chat(query=query, stream=stream):
     answer += chunk
 print('answer:', answer)
 ```
-## 💥 start a more powerful chat  
+## 💥 对话增强  
 By combining historical session information, the assistant can fully understand each query and answer more accurately.  
 When chatting, you need to specify a session ID to manage session information and specify the session rounds that the assistant should consider when answering.
 ```python 
@@ -69,8 +69,8 @@ redis_config = {
     'password':'xxxxxxxxx'
 }
 ```
-## 🤝 personalized customization
+## 🤝 个性化定制
 You can also explore additional customized developments triggered through natural language. If you have any needs in this area, please feel welcome to contact us:  
 - 📬 : zhenhu317@gmail.com  
-## 🏷 license
+## 🏷 许可
 Conference Assistant is licensed under the [Apache-2.0 License](./LICENSE). 
