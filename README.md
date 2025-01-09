@@ -91,6 +91,7 @@ history = my_assistant.history_info(session_id)
 print('session history: ', history)
 ```
 ## 🤝 personalized customization
+![project_case](./images/conference_assistant_case.png)  
 You can also explore additional customized developments triggered through natural language. If you have any needs in this area, please feel welcome to contact us:  
 - email : zhenhu317@gmail.com  
 ## 🏷 license
