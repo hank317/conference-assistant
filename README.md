@@ -23,7 +23,7 @@ You need to specify the name of the company, school, or organization, and you ca
 from assistant import LLMAssistant
 
 # Assistant Settings.
-firm = '中信国安实业集团有限公司' 
+firm = 'CITIC Guoan Industrial Group Co., Ltd' 
 instruction = '' 
 model = 'qwen-max'
 
@@ -45,11 +45,16 @@ os.environ['API_KEY'] = 'sk-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 # spark: generalv3.5  
 ``` 
 You need to provide additional conference documents, and the assistant will learn and answer based on the content of these documents. We currently support a variety of file formats, including *.doc*, *.docx*, *.xls*, *.xlsx*, *.txt*, *.csv*, *.tsv*, and more. However, we recommend using <mark>*.xlsx*</mark> or <mark>*.csv*</mark> formats for optimal results.   
+```python
+# Check the conference content used by the assistant.
+content = my_assistant.conference_info()
+print('conference content: ', content)
+```
 ## 💫 quickly chat with your assistant
 Quickly initiate chat, support streaming and non streaming, default streaming.
 ```python 
 # Start a Chat.
-query = '你叫什么名字？'
+query = 'What should I call you?'
 stream = False
 
 answer = ''
@@ -62,12 +67,13 @@ By combining historical session information, the assistant can fully understand 
 When chatting, you need to specify a session ID to manage session information and specify the session rounds that the assistant should consider when answering.
 ```python 
 # Start a Chat.
-query = '你叫什么名字？'
+session_id = '20250108001'
+query = 'What should I call you?'
 stream = True
 rounds = 3
 
 answer = ''
-for chunk in my_assistant.chat(query=query, stream=stream, rounds=rounds):
+for chunk in my_assistant.chat(session_id=session_id, query=query, stream=stream, rounds=rounds):
     answer += chunk
 print('answer:', answer)
 ```
@@ -78,6 +84,11 @@ redis_config = {
     'port':'7001',
     'password':'xxxxxxxxx'
 }
+```
+Manage historical information through session ID.  
+```python
+histoty = my_assistant.history_info(session_id)
+print('session history: ', history)
 ```
 ## 🤝 personalized customization
 You can also explore additional customized developments triggered through natural language. If you have any needs in this area, please feel welcome to contact us:  
