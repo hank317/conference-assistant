@@ -87,7 +87,7 @@ redis_config = {
 ```
 Manage historical information through session ID.  
 ```python
-histoty = my_assistant.history_info(session_id)
+history = my_assistant.history_info(session_id)
 print('session history: ', history)
 ```
 ## 🤝 personalized customization

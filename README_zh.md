@@ -44,6 +44,11 @@ os.environ['API_KEY'] = 'sk-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 # spark: generalv3.5  
 ``` 
 您需要提供额外的会议文档，助手将基于这些文档的内容进行学习并作答。我们目前支持多种文件格式，包括 *.doc*, *.docx*, *.xls*, *.xlsx*, *.txt*, *.csv*, *.tsv* 等。 推荐使用 <mark>*.xlsx*</mark> 或者 <mark>*.csv*</mark> 。  
+```python
+# 检查助手使用的会议信息
+content = my_assistant.conference_info()
+print('conference content: ', content)
+```
 ## 💫 快速开始
 快速发起聊天，支持流式和非流式传输，默认为流式传输。  
 ```python 
@@ -69,14 +74,19 @@ for chunk in my_assistant.chat(query=query, stream=stream, rounds=rounds):
     answer += chunk
 print('answer:', answer)
 ```
-多轮次会话需要中间件来存储和管理会话信息。请按照如下所示，在 <mark>config.py</mark> 中更改您的 Redis 配置：      
+多轮次会话需要中间件来存储和管理会话信息。请按照如下所示，在 <mark>*config.py*</mark> 中更改您的 Redis 配置：      
 ```python  
 redis_config = {
     'host':'127.0.0.1',
     'port':'7001',
     'password':'xxxxxxxxx'
 }
-```
+```  
+您可以通过会话id来管理会话信息:  
+```python
+history = my_assistant.history_info(session_id)
+print('session history: ', history)
+```   
 ## 🤝 个性化定制
 您还可以探索通过自然语言触发的其他定制化开发。若您在这一方面有任何需求，欢迎随时联系我们： 
 - 邮箱: zhenhu317@gmail.com  
