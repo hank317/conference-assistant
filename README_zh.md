@@ -1,4 +1,4 @@
-# Conference Assistant ![Static Badge](https://img.shields.io/badge/Apache-2.0-green) ![Static Badge](https://img.shields.io/badge/NewBie-NLP-blue)  
+# 会议助手 ![Static Badge](https://img.shields.io/badge/Apache-2.0-green) ![Static Badge](https://img.shields.io/badge/NewBie-NLP-blue)  
 ![project_logo](./images/conference_assistant_logo.png)  
 <h4 align="center">
     <p>
@@ -11,8 +11,7 @@
 </h4>  
 
 [English](README.md) | [中文](./README_zh.md)  
-基于大语言模型（LLMs）的会议助手，适用于公司年会、学术研讨会等多种类型的会议。该助手使用非常简便，仅需提供会议相关文档即可启动服务。  
-包括但不限于以下用途：
+基于大语言模型（LLMs）的会议助手，适用于公司年会、学术研讨会等多种类型的会议。该助手使用非常简便，仅需提供会议相关文档即可启动服务。包括但不限于以下用途：  
 - 会议基本信息
 - 具体议程安排
 - 酒店与行程预订
