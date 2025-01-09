@@ -17,7 +17,7 @@ Include but are not limited to the following purposes:
 - Specific agenda
 - Hotel and itinerary arrangement
 - Other precautions  
-## 🤖 create your exclusive conference assistant  
+## 🤖 create your exclusive conference assistant
 You need to specify the name of the company, school, or organization, and you can also add some instructions to restrict or optimize the assistant's responses.   
 ```python 
 from assistant import LLMAssistant
@@ -45,7 +45,7 @@ os.environ['API_KEY'] = 'sk-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 # spark: generalv3.5  
 ``` 
 You need to provide additional conference documents, and the assistant will learn and answer based on the content of these documents. We currently support a variety of file formats, including *.doc*, *.docx*, *.xls*, *.xlsx*, *.txt*, *.csv*, *.tsv*, and more. However, we recommend using <mark>*.xlsx*</mark> or <mark>*.csv*</mark> formats for optimal results.   
-## 💫 quickly chat with your assistant  
+## 💫 quickly chat with your assistant
 Quickly initiate chat, support streaming and non streaming, default streaming.
 ```python 
 # Start a Chat.
@@ -57,7 +57,7 @@ for chunk in my_assistant.single_chat(query=query, stream=stream):
     answer += chunk
 print('answer:', answer)
 ```
-## 💥 start a more powerful chat  
+## 💥 start a more powerful chat
 By combining historical session information, the assistant can fully understand each query and answer more accurately.  
 When chatting, you need to specify a session ID to manage session information and specify the session rounds that the assistant should consider when answering.
 ```python 

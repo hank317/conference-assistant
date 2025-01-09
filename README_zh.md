@@ -17,7 +17,7 @@
 - 具体议程安排
 - 酒店与行程预订
 - 其他注意事项
-## 🤖 创建助手  
+## 🤖 创建助手
 您需要指定您的公司、学校或组织的名称，并且可以添加一些指令来限制或优化助手的回复。  
 ```python 
 from assistant import LLMAssistant
@@ -45,7 +45,7 @@ os.environ['API_KEY'] = 'sk-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 # spark: generalv3.5  
 ``` 
 您需要提供额外的会议文档，助手将基于这些文档的内容进行学习并作答。我们目前支持多种文件格式，包括 *.doc*, *.docx*, *.xls*, *.xlsx*, *.txt*, *.csv*, *.tsv* 等。 推荐使用 <mark>*.xlsx*</mark> 或者 <mark>*.csv*</mark> 。  
-## 💫 快速开始  
+## 💫 快速开始
 快速发起聊天，支持流式和非流式传输，默认为流式传输。  
 ```python 
 # 开始对话
@@ -57,7 +57,7 @@ for chunk in my_assistant.single_chat(query=query, stream=stream):
     answer += chunk
 print('answer:', answer)
 ```
-## 💥 对话增强  
+## 💥 对话增强
 结合历史会话信息，助手能够全面理解每一个问题，从而提供更加准确的回答。在聊天时，您需要指定一个会话ID来管理会话信息，并明确助手在回答问题时应考虑的会话轮次。  
 ```python 
 # 开始对话
