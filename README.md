@@ -12,23 +12,19 @@ You need to specify the name of the company, school, or organization, and you ca
 from assistant import LLMAssistant
 
 # Assistant Settings.
-
 firm = '中信国安实业集团有限公司' 
 instruction = '' 
 model = 'qwen-max'
 
 # Conference Information.
-
 file_path = ['./data/agenda_example.xlsx'] 
         
 # Create Conference Assistant.
-
 my_assistant = LLMAssistant(firm=firm, instruction=instrction, file_path=file_path, model=model)
 ```  
 You need to specify the large language model used by the assistant. We follow the OpenAI SDK, and currently support the following models: qwen、kimi、spark. If there are many documents, it is recommended to use a model that supports longer context input.  
 ```python
 # Add your api_key to the environment variables.
-
 import os
 os.environ['API_KEY'] = 'sk-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
@@ -38,7 +34,7 @@ os.environ['API_KEY'] = 'sk-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 # spark: generalv3.5  
 ``` 
 You need to provide additional conference documents, and the assistant will learn and answer based on the content of these documents. We currently support a variety of file formats, including *.doc*, *.docx*, *.xls*, *.xlsx*, *.txt*, *.csv*, *.tsv*, and more. However, we recommend using <mark>*.xlsx*</mark> or <mark>*.csv*</mark> formats for optimal results.   
-## 💫 start chatting with your assistant  
+## 💫 quickly chat with your assistant  
 Quickly initiate chat, support streaming and non streaming, default streaming.
 ```python 
 # Start a Chat.
